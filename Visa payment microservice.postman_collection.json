@@ -1,0 +1,695 @@
+{
+	"id": "23f37dda-f0cf-8727-2071-f682fd42ecbc",
+	"name": "Visa payment microservice",
+	"description": "",
+	"order": [
+		"0786192c-c05d-cb66-fda8-cc3f23d02f6d",
+		"46ca39d7-9f16-e6b0-8cc2-51a3d0682cb5",
+		"d7da2429-b041-0b56-6d06-8d8c93efba24",
+		"87e2123c-0ad2-3bec-8740-46e6263b4d2c",
+		"17ad4fc7-2a92-bb76-afc4-675acd861398",
+		"c40fe5f5-6e51-5216-3b05-6429a44fa113",
+		"0007faba-924c-0066-220b-7afacbe687a1",
+		"c1b244ae-8d73-4840-15dc-b21692699dc4",
+		"a44dce26-da48-8e40-8d0e-81ec7f9ee56a",
+		"da032848-4a56-6fff-c34e-d93f2281e680",
+		"9999998b-a9ef-b927-91d5-89025da224e9",
+		"43fd02bc-af94-0d15-14ef-ee65044505eb",
+		"f2688d74-cf7f-48d6-3a52-de8da91f1d81",
+		"b1f03803-5aac-996e-dce2-fad163069c92",
+		"ab704244-3847-94bd-a66e-23b78474c979"
+	],
+	"folders": [],
+	"timestamp": 1508603965625,
+	"owner": "892326",
+	"public": false,
+	"requests": [
+		{
+			"id": "0007faba-924c-0066-220b-7afacbe687a1",
+			"headers": "x-api-key: {{x-api-key}}\nContent-Type: application/json\nx-card-id: {{x-card-id}}\non-behalf-of-user: {{on-behalf-of-user}}\n",
+			"headerData": [
+				{
+					"key": "x-api-key",
+					"value": "{{x-api-key}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-card-id",
+					"value": "{{x-card-id}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "on-behalf-of-user",
+					"value": "{{on-behalf-of-user}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{base-url}}/api/v1/authorizations/{id}",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PATCH",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518573940717,
+			"name": "Update an Authorization",
+			"description": "",
+			"collectionId": "23f37dda-f0cf-8727-2071-f682fd42ecbc",
+			"responses": [],
+			"rawModeData": "{\n\t\"status\":\"void\"\n}"
+		},
+		{
+			"id": "0786192c-c05d-cb66-fda8-cc3f23d02f6d",
+			"headers": "x-api-key: {{x-api-key}}\n",
+			"headerData": [
+				{
+					"key": "x-api-key",
+					"value": "{{x-api-key}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{base-url}}//api/v1/ping",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1508802808958,
+			"name": "Ping",
+			"description": "",
+			"collectionId": "23f37dda-f0cf-8727-2071-f682fd42ecbc",
+			"responses": []
+		},
+		{
+			"id": "17ad4fc7-2a92-bb76-afc4-675acd861398",
+			"headers": "x-api-key: {{x-api-key}}\nContent-Type: application/json\nx-card-id: {{x-card-id}}\non-behalf-of-user: {{on-behalf-of-user}}\n",
+			"headerData": [
+				{
+					"key": "x-api-key",
+					"value": "{{x-api-key}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-card-id",
+					"value": "{{x-card-id}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "on-behalf-of-user",
+					"value": "{{on-behalf-of-user}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{base-url}}/api/v1/captures",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518574033251,
+			"name": "Capture an Authorization",
+			"description": "",
+			"collectionId": "23f37dda-f0cf-8727-2071-f682fd42ecbc",
+			"responses": [],
+			"rawModeData": "{\n\t\"amount\": \"4\",\n\t\"currency\": \"USD\",\n\t\"order_id\": \"\",\n\t\"authorization_id\": \"\",\n\t\"billing_address\":{\n\t\t\"first_name\":\"John\",\n\t\t\"last_name\":\"Doe\",\n\t\t\"street1\": \"1 Market Street\",\n\t\t\"city\": \"San Francisco\",\n\t\t\"state\": \"CA\",\n\t\t\"country\": \"USA\",\n\t\t\"postal_code\": \"94102\",\n\t\t\"email\": \"test@test.com\"\n\t}\n\t\n\t\n}"
+		},
+		{
+			"id": "43fd02bc-af94-0d15-14ef-ee65044505eb",
+			"headers": "x-api-key: {{x-api-key}}\nContent-Type: application/json\non-behalf-of-user: {{on-behalf-of-user}}\nx-card-id: {{x-card-id}}\n",
+			"headerData": [
+				{
+					"key": "x-api-key",
+					"value": "{{x-api-key}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "on-behalf-of-user",
+					"value": "{{on-behalf-of-user}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-card-id",
+					"value": "{{x-card-id}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{base-url}}/api/v1/refunds",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518573985347,
+			"name": "Refund a Capture",
+			"description": "",
+			"collectionId": "23f37dda-f0cf-8727-2071-f682fd42ecbc",
+			"responses": [],
+			"rawModeData": "{\r\t\"order_id\": \"\",\r\t\"capture_id\": \"\",\r\t\"amount\": 6,\r\t\"currency\": \"USD\"\r}\r"
+		},
+		{
+			"id": "46ca39d7-9f16-e6b0-8cc2-51a3d0682cb5",
+			"headers": "x-api-key: {{x-api-key}}\non-behalf-of-user: {{on-behalf-of-user}}\n",
+			"headerData": [
+				{
+					"key": "x-api-key",
+					"value": "{{x-api-key}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "on-behalf-of-user",
+					"value": "{{on-behalf-of-user}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{base-url}}/api/v1/keys",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1508870347392,
+			"name": "Get Key",
+			"description": "",
+			"collectionId": "23f37dda-f0cf-8727-2071-f682fd42ecbc",
+			"responses": []
+		},
+		{
+			"id": "87e2123c-0ad2-3bec-8740-46e6263b4d2c",
+			"headers": "x-api-key: {{x-api-key}}\nContent-Type: application/json\nx-card-id: {{x-card-id}}\non-behalf-of-user: {{on-behalf-of-user}}\n",
+			"headerData": [
+				{
+					"key": "x-api-key",
+					"value": "{{x-api-key}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-card-id",
+					"value": "{{x-card-id}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "on-behalf-of-user",
+					"value": "{{on-behalf-of-user}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{base-url}}/api/v1/authorizations",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518574019405,
+			"name": "Create Authorization",
+			"description": "",
+			"collectionId": "23f37dda-f0cf-8727-2071-f682fd42ecbc",
+			"responses": [],
+			"rawModeData": "{\n\t\"amount\": \"4\",\n\t\"currency\": \"USD\",\n\t\"order_id\": \"9\",\n\t\"merchant_id\": \"merchant_test\",\n\t\"payment\": {\n\t\t\t\t\"token\":\"\",\n\t\t\t\t\"tokenization_scheme\": \"cybersource\",\n\t\t\t\t\"expiry\":{\n\t\t\t\t\t\"month\":\"12\",\n\t\t\t\t\t\"year\":\"2020\"\n\t\t\t\t}\n\t},\n\t\"billing_address\":{\n\t\t\"first_name\":\"John\",\n\t\t\"last_name\":\"Doe\",\n\t\t\"street1\": \"1 Market Street\",\n\t\t\"city\": \"San Francisco\",\n\t\t\"state\": \"CA\",\n\t\t\"country\": \"USA\",\n\t\t\"postal_code\": \"94102\",\n\t\t\"email\": \"test@test.com\"\n\t}\n\t\n}"
+		},
+		{
+			"id": "9999998b-a9ef-b927-91d5-89025da224e9",
+			"headers": "x-api-key: {{x-api-key}}\nContent-Type: application/json\non-behalf-of-user: {{on-behalf-of-user}}\nx-card-id: {{x-card-id}}\n",
+			"headerData": [
+				{
+					"key": "x-api-key",
+					"value": "{{x-api-key}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "on-behalf-of-user",
+					"value": "{{on-behalf-of-user}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-card-id",
+					"value": "{{x-card-id}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{base-url}}/api/v1/refunds",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518573989262,
+			"name": "Refund a Sale",
+			"description": "",
+			"collectionId": "23f37dda-f0cf-8727-2071-f682fd42ecbc",
+			"responses": [],
+			"rawModeData": "{\r\t\"order_id\": \"\",\r\t\"sale_id\": \"\",\r\t\"amount\": 2,\r\t\"currency\": \"USD\"\r}\r"
+		},
+		{
+			"id": "a44dce26-da48-8e40-8d0e-81ec7f9ee56a",
+			"headers": "x-api-key: {{x-api-key}}\nContent-Type: application/json\non-behalf-of-user: {{on-behalf-of-user}}\nx-card-id: 677ef72f-9ca3-41bf-9019-c5c0c9544bee\n",
+			"headerData": [
+				{
+					"key": "x-api-key",
+					"value": "{{x-api-key}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "on-behalf-of-user",
+					"value": "{{on-behalf-of-user}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-card-id",
+					"value": "677ef72f-9ca3-41bf-9019-c5c0c9544bee",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{base-url}}/api/v1/sales/{id}",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PATCH",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518573953194,
+			"name": "Update a Sale",
+			"description": "",
+			"collectionId": "23f37dda-f0cf-8727-2071-f682fd42ecbc",
+			"responses": [],
+			"rawModeData": "{\n\t\"status\":\"void\"\n}"
+		},
+		{
+			"id": "ab704244-3847-94bd-a66e-23b78474c979",
+			"headers": "x-api-key: {{x-api-key}}\nContent-Type: application/json\nx-card-id: {{x-card-id}}\non-behalf-of-user: {{on-behalf-of-user}}\n",
+			"headerData": [
+				{
+					"key": "x-api-key",
+					"value": "{{x-api-key}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-card-id",
+					"value": "{{x-card-id}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "on-behalf-of-user",
+					"value": "{{on-behalf-of-user}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{base-url}}/api/v1/captures",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1508803570766,
+			"name": "Get Captures for User",
+			"description": "",
+			"collectionId": "23f37dda-f0cf-8727-2071-f682fd42ecbc",
+			"responses": [],
+			"rawModeData": "{\n\t\"amount\": \"3\",\n\t\"currency\": \"USD\",\n\t\"order_id\": \"21\",\n\t\"merchant_id\": \"GenAir_Store\",\n\t\"payment\": {\n\t\t\t\t\"token\":\"4924713967596213604101\",\n\t\t\t\t\"tokenization_scheme\": \"cybersource\",\n\t\t\t\t\"expiry\":{\n\t\t\t\t\t\"month\":\"12\",\n\t\t\t\t\t\"year\":\"2020\"\n\t\t\t\t}\n\t},\n\t\"billing_address\":{\n\t\t\"first_name\":\"John\",\n\t\t\"last_name\":\"Doe\",\n\t\t\"street1\": \"1 Market Street\",\n\t\t\"city\": \"San Francisco\",\n\t\t\"state\": \"CA\",\n\t\t\"country\": \"USA\",\n\t\t\"postal_code\": \"94102\",\n\t\t\"email\": \"null@null.com\"\n\t}\n\t\n}\n"
+		},
+		{
+			"id": "b1f03803-5aac-996e-dce2-fad163069c92",
+			"headers": "x-api-key: {{x-api-key}}\nContent-Type: application/json\nx-card-id: {{x-card-id}}\non-behalf-of-user: {{on-behalf-of-user}}\n",
+			"headerData": [
+				{
+					"key": "x-api-key",
+					"value": "{{x-api-key}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-card-id",
+					"value": "{{x-card-id}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "on-behalf-of-user",
+					"value": "{{on-behalf-of-user}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{base-url}}/api/v1/sales",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1508803330033,
+			"name": "Get Sales for User",
+			"description": "",
+			"collectionId": "23f37dda-f0cf-8727-2071-f682fd42ecbc",
+			"responses": [],
+			"rawModeData": "{\n\t\"amount\": \"3\",\n\t\"currency\": \"USD\",\n\t\"order_id\": \"21\",\n\t\"merchant_id\": \"GenAir_Store\",\n\t\"payment\": {\n\t\t\t\t\"token\":\"4924713967596213604101\",\n\t\t\t\t\"tokenization_scheme\": \"cybersource\",\n\t\t\t\t\"expiry\":{\n\t\t\t\t\t\"month\":\"12\",\n\t\t\t\t\t\"year\":\"2020\"\n\t\t\t\t}\n\t},\n\t\"billing_address\":{\n\t\t\"first_name\":\"John\",\n\t\t\"last_name\":\"Doe\",\n\t\t\"street1\": \"1 Market Street\",\n\t\t\"city\": \"San Francisco\",\n\t\t\"state\": \"CA\",\n\t\t\"country\": \"USA\",\n\t\t\"postal_code\": \"94102\",\n\t\t\"email\": \"null@null.com\"\n\t}\n\t\n}\n"
+		},
+		{
+			"id": "c1b244ae-8d73-4840-15dc-b21692699dc4",
+			"headers": "x-api-key: {{x-api-key}}\nContent-Type: application/json\non-behalf-of-user: {{on-behalf-of-user}}\nx-card-id: {{x-card-id}}\n",
+			"headerData": [
+				{
+					"key": "x-api-key",
+					"value": "{{x-api-key}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "on-behalf-of-user",
+					"value": "{{on-behalf-of-user}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-card-id",
+					"value": "{{x-card-id}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{base-url}}/api/v1/captures/{id}",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PATCH",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518573948075,
+			"name": "Update a Capture",
+			"description": "",
+			"collectionId": "23f37dda-f0cf-8727-2071-f682fd42ecbc",
+			"responses": [],
+			"rawModeData": "{\n\t\"status\":\"void\"\n}"
+		},
+		{
+			"id": "c40fe5f5-6e51-5216-3b05-6429a44fa113",
+			"headers": "x-api-key: {{x-api-key}}\nContent-Type: application/json\nx-card-id: {{x-card-id}}\non-behalf-of-user: {{on-behalf-of-user}}\n",
+			"headerData": [
+				{
+					"key": "x-api-key",
+					"value": "{{x-api-key}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-card-id",
+					"value": "{{x-card-id}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "on-behalf-of-user",
+					"value": "{{on-behalf-of-user}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{base-url}}/api/v1/sales",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518574091698,
+			"name": "Create a Sale",
+			"description": "",
+			"collectionId": "23f37dda-f0cf-8727-2071-f682fd42ecbc",
+			"responses": [],
+			"rawModeData": "{\n\t\"amount\": \"25\",\n\t\"currency\": \"USD\",\n\t\"order_id\": \"\",\n\t\"merchant_id\": \"Test_Merchant\",\n\t\"payment\": {\n\t\t\t\t\"token\":\"\",\n\t\t\t\t\"tokenization_scheme\": \"cybersource\",\n\t\t\t\t\"expiry\":{\n\t\t\t\t\t\"month\":\"12\",\n\t\t\t\t\t\"year\":\"2020\"\n\t\t\t\t}\n\t},\n\t\"billing_address\":{\n\t\t\"first_name\":\"John\",\n\t\t\"last_name\":\"Doe\",\n\t\t\"street1\": \"1 Market Street\",\n\t\t\"city\": \"San Francisco\",\n\t\t\"state\": \"CA\",\n\t\t\"country\": \"USA\",\n\t\t\"postal_code\": \"94102\",\n\t\t\"email\": \"test@test.com\"\n\t}\n\t\n}\n"
+		},
+		{
+			"id": "d7da2429-b041-0b56-6d06-8d8c93efba24",
+			"headers": "x-api-key: {{x-api-key}}\non-behalf-of-user: {{on-behalf-of-user}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "x-api-key",
+					"value": "{{x-api-key}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "on-behalf-of-user",
+					"value": "{{on-behalf-of-user}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{base-url}}/api/v1/tokens",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518574072314,
+			"name": "Generate Token",
+			"description": "",
+			"collectionId": "23f37dda-f0cf-8727-2071-f682fd42ecbc",
+			"responses": [],
+			"rawModeData": "{\n\t\"keyId\": \"\",\n\t\"cardInfo\":{\n\t\t\"cardExpirationMonth\":\"05\",\n\t\t\"cardExpirationYear\":\"2027\",\n\t\t\"cardNumber\":\"4111111111111111\",\n\t\t\"cardType\": \"001\"\n\t}\n}"
+		},
+		{
+			"id": "da032848-4a56-6fff-c34e-d93f2281e680",
+			"headers": "x-api-key: {{x-api-key}}\nContent-Type: application/json\non-behalf-of-user: {{on-behalf-of-user}}\nx-card-id: {{x-card-id}}\n",
+			"headerData": [
+				{
+					"key": "x-api-key",
+					"value": "{{x-api-key}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "on-behalf-of-user",
+					"value": "{{on-behalf-of-user}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-card-id",
+					"value": "{{x-card-id}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{base-url}}/api/v1/refunds/{id}",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PATCH",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1518573958267,
+			"name": "Update a Refund",
+			"description": "",
+			"collectionId": "23f37dda-f0cf-8727-2071-f682fd42ecbc",
+			"responses": [],
+			"rawModeData": "{\n\t\"status\":\"void\"\n}"
+		},
+		{
+			"id": "f2688d74-cf7f-48d6-3a52-de8da91f1d81",
+			"headers": "Content-Type: application/json\nx-card-id: {{x-card-id}}\non-behalf-of-user: {{on-behalf-of-user}}\nx-api-key: {{x-api-key}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-card-id",
+					"value": "{{x-card-id}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "on-behalf-of-user",
+					"value": "{{on-behalf-of-user}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-api-key",
+					"value": "{{x-api-key}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{base-url}}/api/v1/authorizations",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1508607794480,
+			"name": "Get Authorizations for User",
+			"description": "",
+			"collectionId": "23f37dda-f0cf-8727-2071-f682fd42ecbc",
+			"responses": [],
+			"rawModeData": "{\n\t\"amount\": \"2\",\n\t\"currency\": \"USD\",\n\t\"order_id\": \"7\",\n\t\"merchant_id\": \"vafa_123\",\n\t\"payment\": {\n\t\t\t\t\"token\":\"4924713967596213604101\",\n\t\t\t\t\"tokenization_scheme\": \"cybersource\",\n\t\t\t\t\"expiry\":{\n\t\t\t\t\t\"month\":\"12\",\n\t\t\t\t\t\"year\":\"2020\"\n\t\t\t\t}\n\t},\n\t\"billing_address\":{\n\t\t\"first_name\":\"Arthas2\",\n\t\t\"last_name\":\"Menethil2\",\n\t\t\"street1\": \"1 Market Street\",\n\t\t\"city\": \"San Francisco\",\n\t\t\"state\": \"CA\",\n\t\t\"country\": \"USA\",\n\t\t\"postal_code\": \"94102\",\n\t\t\"email\": \"null@null.com\"\n\t}\n\t\n}"
+		}
+	]
+}
