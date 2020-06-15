@@ -13,7 +13,7 @@
 		<springframework.version>4.3.0.RELEASE</springframework.version>
 		<jackson.library>2.7.5</jackson.library>
 		<javax.validation-api.version>1.1.0.Final</javax.validation-api.version>
-		<hibernate-validator.version>5.0.1.Final</hibernate-validator.version>
+		<hibernate-validator.version>5.3.5.Final</hibernate-validator.version>
 		<maven-compiler-plugin.version>3.2</maven-compiler-plugin.version>
 		<maven-war-plugin.version>2.4</maven-war-plugin.version>
 		<odata.version>4.3.0</odata.version>
